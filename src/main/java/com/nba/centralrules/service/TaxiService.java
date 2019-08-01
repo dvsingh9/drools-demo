@@ -1,7 +1,7 @@
-package me.dvsingh.drools.service;
+package com.nba.centralrules.service;
 
-import me.dvsingh.drools.model.Fare;
-import me.dvsingh.drools.model.TaxiRide;
+import com.nba.centralrules.model.TaxiRide;
+import com.nba.centralrules.model.Fare;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;

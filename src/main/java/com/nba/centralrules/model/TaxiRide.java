@@ -1,4 +1,4 @@
-package me.dvsingh.drools.model;
+package com.nba.centralrules.model;
 
 public class TaxiRide {
 

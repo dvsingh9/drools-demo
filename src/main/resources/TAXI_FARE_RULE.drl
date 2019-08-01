@@ -1,8 +1,8 @@
-import me.dvsingh.drools.model.TaxiRide;
-import me.dvsingh.drools.model.Fare;
+import com.nba.centralrules.model.TaxiRide;
+import com.nba.centralrules.model.Fare;
 import java.util.*;
 
-global me.dvsingh.drools.model.Fare rideFare;
+global com.nba.centralrules.model.Fare rideFare;
 dialect  "mvel"
 
 rule "Calculate Taxi Fare - Scenario 1"

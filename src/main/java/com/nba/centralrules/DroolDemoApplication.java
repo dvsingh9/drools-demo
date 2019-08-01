@@ -1,9 +1,9 @@
-package me.dvsingh.drools;
+package com.nba.centralrules;
 
-import me.dvsingh.drools.model.Fare;
-import me.dvsingh.drools.model.TaxiRide;
-import me.dvsingh.drools.service.TaxiFareConfiguration;
-import me.dvsingh.drools.service.TaxiService;
+import com.nba.centralrules.model.TaxiRide;
+import com.nba.centralrules.service.TaxiFareConfiguration;
+import com.nba.centralrules.service.TaxiService;
+import com.nba.centralrules.model.Fare;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

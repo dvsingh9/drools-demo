@@ -9,17 +9,38 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>me.dvsingh.drools</groupId>
-    <artifactId>drool-demo</artifactId>
+    <artifactId>nba-central-rules</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>drool-demo</name>
-    <description>Drools demo</description>
+    <description>NBA Central Rules Engine</description>
 
     <properties>
         <java.version>1.8</java.version>
         <drools-version>7.24.0.Final</drools-version>
+        <start-class>com.nba.centralrules.DroolDemoApplication</start-class>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>swagger-ui</artifactId>
+                <version>2.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-rs-service-description-swagger</artifactId>
+                <version>3.3.2</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -55,6 +76,29 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- extra dependencies for swagger -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>swagger-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-rs-service-description-swagger</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.cxf</groupId>
+                    <artifactId>cxf-rt-rs-service-description-swagger-ui</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.swagger/swagger-jaxrs -->
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-jaxrs</artifactId>
+            <version>1.5.22</version>
+        </dependency>
+
     </dependencies>
 
 
